@@ -1,0 +1,25 @@
+cabal-version:      3.0
+name:               c2hs-th-reproducer
+version:            0.1.0.0
+license:            MIT
+license-file:       LICENSE
+author:             Abastro
+maintainer:         abab9579@gmail.com
+build-type:         Simple
+
+common warnings
+    ghc-options: -Wall
+
+library
+    import:           warnings
+    exposed-modules:
+        C2HS
+        THSplice
+        User
+    build-depends:
+        base ^>=4.17.1.0,
+        template-haskell,
+    build-tool-depends:
+        c2hs:c2hs >=0.28,
+    hs-source-dirs:   src
+    default-language: GHC2021
